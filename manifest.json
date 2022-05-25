@@ -1,0 +1,14 @@
+{
+    "name":"自行车测速",
+    "short_name":"自行车测速",
+    "background_color":"#eee",
+    "icons":[
+        {
+            "src":"image/bicyclestatic2.png",
+            "sizes":"120x120",
+            "type": "image/png"
+        }
+    ],
+    "start_url":"/BicycleSpeed/index2.html",
+    "display":"fullscreen"
+}
