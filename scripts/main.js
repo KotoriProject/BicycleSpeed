@@ -124,6 +124,13 @@ blueButton.addEventListener("click", (event) => {
         console.log(error);
 });
 });
+//注册service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+        .then(serviceWorker => {
+            console.log('Service Worker registered');
+        });
+}
 
 function hex2ascii(hex){
     var a=hex;
