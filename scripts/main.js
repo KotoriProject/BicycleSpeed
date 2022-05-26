@@ -125,16 +125,11 @@ blueButton.addEventListener("click", (event) => {
 });
 });
 //注册service worker
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js')
         .then(serviceWorker => {
             console.log('Service Worker registered');
         });
 }
+*/
 
-function hex2ascii(hex){
-    var a=hex;
-    for(var i=0;;i++){
-        
-    }
-}
