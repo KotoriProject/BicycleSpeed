@@ -22,11 +22,15 @@ function setSpeed() {
     }
 }
 
-function sendSpeed(){
+/*function sendSpeed(){
     const uint8arr=Uint8Array.of(localStorage.getItem("setSpeed"));
     bicycle.writeSpeed(uint8arr);
 }
-
+*/
+function sendSpeed(){
+    const uint16arr=Uint16Array.of(localStorage.getItem("setSpeed"));
+    bicycle.writeSpeed(uint16arr);
+}
 myButton.onclick = function () {
     setSpeed();
 };
