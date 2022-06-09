@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
-
-  <head>     
+  <head>
     <link href="styles/style.css" rel="stylesheet">
     <link rel="manifest" href="manifest.json">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     <title>自行车测速</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-      <h1>自行车测速项目</h1>
-      <img src="image/bicyclestatic.png" alt="静止的自行车">
-      <button id="requestBluetooth">打开蓝牙</button>
-      <button id="disBluetooth">关闭蓝牙</button>
-      <p>
-      <button id="setSpeedButton">速度阈值设置</button>
-      <p>当前速度阈值:  <span id="thresholdValue">30</span>km/h</p>
-      <pre id="realSpeed">当前速度:</pre>
-      <script src="scripts/main.js" defer></script>
-
-  </body> 
-    
+    <div class="c">
+      <h4>自行车测速项目</h4>
+      <div class="row">
+        <div class="card col 6 gray">
+          <p>
+            <button class="btn" id="requestBluetooth">打开蓝牙</button>
+            <button class="btn" id="disBluetooth">关闭蓝牙</button>
+          </p>
+          <button class="btn" id="setSpeedButton">速度阈值设置</button>
+          <p class="w-100">
+            当前速度阈值: <span id="thresholdValue">30</span>km/h
+          </p>
+          <span class="w-100" id="realSpeed">当前速度:</span>
+        </div>
+        <div class="card col 6">
+          <img src="image/bicyclestatic.png" alt="静止的自行车">
+        </div>
+      </div>
+    </div>
+    <script src="scripts/main.js" defer></script>
+  </body>
 </html>
-    

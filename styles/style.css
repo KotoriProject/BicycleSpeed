@@ -1,14 +1,57 @@
-html {
-    font-size:28px;
+:root {
+  --font: sans-serif;
+  --light: #eee;
 }
 
-h1 {
-  font-size: 60px;
-  text-align: center;
+h2 {
+  font: 400 1.5em var(--font);
+}
+
+.c {
+  max-width: 60em;
+  padding: 1em;
+  margin: auto;
+  font: 1em/1.6 var(--font);
+}
+
+.btn {
+  padding: 1em;
+  background: white;
+  border: solid;
+  font: 0.7em var(--font);
+}
+@media (min-width: 35em) {
+  .col {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .row {
+    width: 100%;
+    display: table;
+    border-spacing: 1em 0;
+  }
+  .\36 {
+    width: 50%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  padding: 1em;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 img {
-  display: block;
-  margin: 0 auto;
-  width:300px;
+  width: 100%;
+  object-fit: scale-down;
+}
+
+.gray {
+  background-color: var(--light);
 }
