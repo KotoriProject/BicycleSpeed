@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+  <head>     
+    <link href="styles/style.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>自行车测速</title>
+  </head>
+
+  <body>
+      <h1>自行车测速项目</h1>
+      <img id="image1" src="image/bicyclestatic.png" alt="静止的自行车">
+      <button id="requestBluetooth">打开蓝牙</button>
+      <button id="disBluetooth">关闭蓝牙</button>
+      <p>
+      <button id="setSpeedButton">速度阈值设置</button>
+      <p>当前速度阈值:  <span id="thresholdValue">30</span>km/h</p>
+      <p>当前速度: <span id="realSpeed">0</span>km/h</p>
+      <script src="scripts/main3.js" defer></script>
+      <audio id="sound" src="1.mp3">
+            Your browser does not support the
+            <code>audio</code> element.
+      </audio>
+
+  </body> 
+    
+</html>
+    
