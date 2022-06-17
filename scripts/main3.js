@@ -120,8 +120,8 @@ class Bicycle {
             .then((characteristic) => {
                 characteristic.addEventListener("characteristicvaluechanged", (e) => {
                     let data = e.target.value;
-                    let tSpeed=data.getfloat32(0);//读取速度阈值数据
-                    let rSpeed=data.getfloat32(1);//读取当前速度数据
+                    let tSpeed=data.getfloat32(0,true);//读取速度阈值数据
+                    let rSpeed=data.getfloat32(1,true);//读取当前速度数据
                     localStorage.setItem("setSpeed", tSpeed);
                     valueSpeed.textContent = localStorage.getItem("setSpeed");
                     realSpeed.textContent = rSpeed;
