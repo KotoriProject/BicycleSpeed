@@ -30,9 +30,12 @@ function setSpeed() {
     let speed = prompt("请输入速度阈值。");
     if (speed === null) return 0;
     let x = +speed;
-
+    if(!(Number.isFinite(x))){
+        alert("您输入的值含有非法字符！");
+        setSpeed();
+    }
     if (x <= 0 || x>255 || !speed) {
-        alert("您输入的速度阈值太小！");
+        alert("您输入的速度阈值太小或太大！");
         setSpeed();
     } else {
         localStorage.setItem("setSpeed", x);
@@ -117,8 +120,8 @@ class Bicycle {
             .then((characteristic) => {
                 characteristic.addEventListener("characteristicvaluechanged", (e) => {
                     let data = e.target.value;
-                    let tSpeed=data.getUint8(0);//读取速度阈值数据
-                    let rSpeed=data.getUint8(1);//读取当前速度数据
+                    let tSpeed=data.getfloat32(0);//读取速度阈值数据
+                    let rSpeed=data.getfloat32(1);//读取当前速度数据
                     localStorage.setItem("setSpeed", tSpeed);
                     valueSpeed.textContent = localStorage.getItem("setSpeed");
                     realSpeed.textContent = rSpeed;
