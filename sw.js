@@ -1,11 +1,12 @@
 const contentToCache=[
   '/BicycleSpeed/',
-  '/BicycleSpeed/index2.html',
+  '/BicycleSpeed/index3.html',
   '/BicycleSpeed/image/bicyclemove.gif',
   '/BicycleSpeed/image/bicyclestatic.png',
   '/BicycleSpeed/image/bicyclestatic2.png',
-  '/BicycleSpeed/scripts/main.js',
+  '/BicycleSpeed/scripts/main3.js',
   '/BicycleSpeed/styles/style.css'
+  '/BicycleSpeed/1.mp3'
 ]
 self.addEventListener('install', (e) => {
   e.waitUntil(
